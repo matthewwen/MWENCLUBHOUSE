@@ -5,9 +5,12 @@ This package created hash maps to handle https request (GET, PUT, PUSH). It coul
 After much debate, I decided to leave project for gorilla/mux, which already been proven to become an industry standard for companies like Microsoft. 
 
 # Definitions
+```
 type Handler func(http.ResponseWriter, * http.Request)
+```
 
 # In Main Function
+```
 var handler Handler = nil
 s := &http.Server {
 	Addr: ":8080",
@@ -40,8 +43,10 @@ func (h Handler) ServeHTTP(w http.ResponseWriter, r * http.Request) {
 		http.Error(w, "Request Not Found", 404)
 	}
 }
+```
 
 # Declaration of Url
+```
 PostHandler = new(urlhandler.UrlHandler)
 
 urlhandler.SetHandler(PostHandler, "/apiwebsite/signin", func(w http.ResponseWriter, r * http.Request, d * urlhandler.UrlDirection) bool {
@@ -55,3 +60,4 @@ urlhandler.SetHandler(PostHandler, "/apiwebsite/signup", func(w http.ResponseWri
 	fmt.Println(r);
 	return false
 })
+```
