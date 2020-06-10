@@ -1,0 +1,5 @@
+[Unit] 
+Description=Server Running Backend for Matthew Wen's mwenclubhouse
+[Service]
+Type = simple
+ExecStart = /home/mwen/GitLab/server/server
