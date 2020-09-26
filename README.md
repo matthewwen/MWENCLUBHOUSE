@@ -6,10 +6,11 @@ PUBLIC team Repo is located at https://github.com/mwenclubhouse
 
 ## Code Snippet List
 ```
-|- cmake       [directory complining C code to work with GoLang Application]
-|- jwt         [JWT Token Authorization written in C to be used in Conjunction with GoLang Server]
-|- urlhandler  [GoLang Code to handle url links via map + linked list]
-|- aws         [GoLang Code to retrieve data from AWS DynamoDB]
+|- cmake             [directory complining C code to work with GoLang Application]
+|- jwt               [JWT Token Authorization written in C to be used in Conjunction with GoLang Server]
+|- urlhandler        [GoLang Code to handle url links via map + linked list]
+|- aws               [GoLang Code to retrieve data from AWS DynamoDB]
+|- mwenclubhouse-sdk [GoLang Code from the actual mwenclubhouse-sdk from GitLab]
 ```
 
 ## Project Overview
