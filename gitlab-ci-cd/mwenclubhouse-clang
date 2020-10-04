@@ -1,0 +1,19 @@
+image: ruby:2.5
+
+stages:
+  - test
+  - build
+
+build:
+  stage: build
+  before_script:
+    - apt update && apt -y install make autoconf cmake
+    - ./scripts/install_dependencies.sh
+  script:
+    - ./scripts/build.sh
+
+# run tests using the binary built before
+test:
+  stage: test
+  script:
+    - ./scripts/test.sh

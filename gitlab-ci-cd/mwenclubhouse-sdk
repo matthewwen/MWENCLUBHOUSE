@@ -1,0 +1,12 @@
+image: golang:latest
+
+variables:
+  REPO_NAME: gitlab.com/mwenclubhouse/mwenclubhouse-sdk/mwen
+
+stages:
+  - test
+
+format:
+  stage: test
+  script:
+    - go test -json ./...
