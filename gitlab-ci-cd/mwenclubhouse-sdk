@@ -1,12 +1,19 @@
-image: golang:latest
+image: ruby:2.5
 
 variables:
-  REPO_NAME: gitlab.com/mwenclubhouse/mwenclubhouse-sdk/mwen
+  REPO_NAME: ""
 
 stages:
   - test
 
 format:
   stage: test
+  before_script:
+    - apt update && apt -y install make autoconf cmake golang
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/mwenclubhouse/mwenclubhouse-clang.git
+    - cd mwenclubhouse-clang
+    - ./scripts/install_dependencies.sh
+    - ./scripts/build.sh
+    - cd ../
   script:
     - go test -json ./...
